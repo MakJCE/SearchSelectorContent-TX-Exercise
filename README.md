@@ -45,6 +45,22 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 </details>
 
 <details>
+  <summary><strong>Files structure</strong></summary>
+
+We set ./src as a root folder. Inside src we gonna group components in folders by the project's funtionalities and a single folder "Views" to put the only view for Index page. 
+
+Also we considered to put every Component in a single folder due to unit test file for every Component.
+
+The folders present in ./src are:
+- Searching
+- Albums
+- Shared
+- Views
+
+
+</details>
+
+<details>
   <summary><strong>Learn More</strong></summary>
 
 
