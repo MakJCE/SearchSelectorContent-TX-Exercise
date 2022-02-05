@@ -1,11 +1,11 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import IndexPage from "./Views/IndexPage"
 
 function App() {
   return (
     <div>
       <section className="App">
-        <Typography color="textPrimary">Index page</Typography>
+        <IndexPage></IndexPage>
       </section>
     </div>
   );
