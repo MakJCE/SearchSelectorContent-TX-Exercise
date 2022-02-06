@@ -8,7 +8,7 @@ const theme = createTheme({
   palette: {
     type: "dark",
     primary: {
-      main: "#00FFF5",
+      main: "#FD7014",
     },
     secondary: {
       main: "#393E46",
@@ -31,39 +31,32 @@ theme.typography.h1 = {
   fontFamily: "Segoe UI",
   fontStyle: 'normal',
   fontWeight: 'bold',
-  fontSize: '30px',
+  fontSize: '28px',
   '@media (min-width:768px)': {
     fontFamily: "Segoe UI",
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: '42px',
-    lineHeight: '55px',
+    fontSize: '32px',
   },
 }
 theme.typography.h2 = {
   fontFamily: "Segoe UI",
   fontStyle: 'normal',
-  fontWeight: 'bold',
-  fontSize: '26px',
+  fontSize: '24px',
   '@media (min-width:768px)': {
     fontFamily: "Segoe UI",
     fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: '36px',
-    lineHeight: '55px',
+    fontSize: '28px',
   },
 }
 theme.typography.h3 = {
   fontFamily: "Segoe UI",
   fontStyle: 'normal',
-  fontWeight: '400px',
-  fontSize: '18px',
+  fontSize: '16px',
   '@media (min-width:768px)': {
     fontFamily: "Segoe UI",
     fontStyle: 'normal',
-    fontWeight: '400px',
-    fontSize: '27px',
-    lineHeight: '55px',
+    fontSize: '20px',
   },
 }
 

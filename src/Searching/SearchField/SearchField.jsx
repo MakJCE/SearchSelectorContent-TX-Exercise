@@ -8,17 +8,19 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const SearchField = ({ fieldValue, setFieldValue }) => {
+const SearchField = ({ fieldValue, setFieldValue, errorField }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <TextField
+        error={errorField}
         id="artists-search-field"
         label="Artist Name"
         variant="outlined"
         color="primary"
         onChange={(event) => setFieldValue(event.target.value)}
         className={classes.field}
+        helperText={(errorField)?"Incorrect entry.":""}
       />
     </div>
   );

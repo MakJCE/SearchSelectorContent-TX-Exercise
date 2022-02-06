@@ -2,8 +2,8 @@ import React from "react";
 import { InputLabel, MenuItem, FormControl, Select } from "@material-ui/core";
 import typesList from "./typesList";
 
-const camelCaseToSentence = (text) => {
-  var result = text.replace(/([A-Z])/g, " $1");
+const dashCaseToSentence = (text) => {
+  var result = text.replace("-", " ");
   return result.charAt(0).toUpperCase() + result.slice(1);
 };
 
@@ -21,13 +21,13 @@ const MediaTypeDropdown = ({ selectValue, setSelectValue }) => {
           style={{ padding: "0 10px 0 0" }}
           color="primary"
         >
-          <MenuItem value="">
-            <em>None</em>
+          <MenuItem value="all">
+            <em>All</em>
           </MenuItem>
           {typesList.map((type, key) => {
             return (
               <MenuItem key={key} value={type}>
-                {camelCaseToSentence(type)}
+                {dashCaseToSentence(type)}
               </MenuItem>
             );
           })}

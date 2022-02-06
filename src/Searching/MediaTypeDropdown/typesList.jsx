@@ -1,3 +1,3 @@
-const typesList = ["movie", "shortFilm", "tvShow"];
+const typesList = ["feature-movie", "tv-episode", "song"];
 
 export default typesList;

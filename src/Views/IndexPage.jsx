@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SearchingSection from "../Searching/SearchingSection/SearchingSection";
 import { makeStyles } from "@material-ui/core/styles";
+import AlbumsList from "../Albums/AlbumsList/AlbumsList";
 
 const useStyles = makeStyles((theme) => ({
   root:{
@@ -8,19 +9,22 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    marginTop:"5%"
+    marginTop:"5%",
+    gap: "40px"
   }
 }));
 
 const IndexPage = () => {
   const classes = useStyles();
-  const [searchedAlbum, setSearchedAlbum] = useState({artist:"", type:""});
+  const [searchResultsList, setSearchResultsList] = useState({
+    results: [],
+    resultCount: 0,
+    resultLabel: "",
+  });
   return (
     <div className={classes.root}>
-      <SearchingSection setSearchedAlbum={setSearchedAlbum}></SearchingSection>
-      <div>
-        {`${searchedAlbum.artist} ${searchedAlbum.type}`}
-      </div>
+      <SearchingSection searchResultsList={searchResultsList} setSearchResultsList={setSearchResultsList}></SearchingSection>
+      <AlbumsList searchResultsList={searchResultsList}></AlbumsList>
     </div>
   );
 };

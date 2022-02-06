@@ -7,8 +7,8 @@ const ActionButton = ({ label, action }) => {
       <Button
         variant="contained"
         onClick={action}
-        color="secondary"
-        style={{ textTransform: "none" }}
+        color="primary"
+        style={{ textTransform: "none", fontSize: 21 }}
       >
         {label}
       </Button>
