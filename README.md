@@ -45,6 +45,49 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 </details>
 
 <details>
+  <summary><strong>Files structure</strong></summary>
+
+We set ./src as a root folder. Inside src we gonna group components in folders by the project's funtionalities and a single folder "Views" to put the only view for Index page. 
+
+Also we considered to put every Component in a single folder due to unit test file for every Component.
+
+The folders present in ./src are:
+- Searching
+- Albums
+- Shared
+- Views
+
+
+</details>
+
+<details>
+    <summary><strong>Tools and Dependencies</strong></summary>
+
+
+[![Material Version](https://img.shields.io/badge/Material--ui-v4.-blue)](https://v4.mui.com/)
+
+MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications. Follow your own design system, or start with Material Design.
+
+[![React Version](https://img.shields.io/badge/React-17.0.2-9cf)](https://es.reactjs.org/)
+
+React te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.
+
+
+[![Axios Version](https://img.shields.io/badge/Axios-0.21.4-red)](https://www.npmjs.com/package/axios)
+
+Promise based HTTP client for the browser and node.js
+
+[![Enzyme Version](https://img.shields.io/badge/Enzyme-3.11.0-blueviolet)](https://www.npmjs.com/package/enzyme)
+
+Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output. You can also manipulate, traverse, and in some ways simulate runtime given the output.
+
+[![JavaScript Version](https://img.shields.io/badge/Javascript-ECMA%206-inactive)](https://www.w3schools.com/js/js_es6.asp)
+
+ECMAScript 2015 was the second major revision of JavaScript.
+
+</details>
+
+<details>
   <summary><strong>Learn More</strong></summary>
 
 
