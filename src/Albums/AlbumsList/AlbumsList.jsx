@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Album from "../Album/Album";
 import { Typography } from "@material-ui/core";
+import Pagination from "@material-ui/lab/Pagination";
 
 const useStyles = makeStyles({
   root: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles({
 const AlbumsList = ({ searchResultsList }) => {
   const classes = useStyles();
   const { result, resultCount, resultLabel } = searchResultsList;
+  const [page, setPage] = React.useState(1);
   return (
     <div className={classes.root}>
       <Typography
@@ -28,11 +30,25 @@ const AlbumsList = ({ searchResultsList }) => {
       >
         {resultCount} matches found
       </Typography>
-      <section className={classes.results}>
+      <section>
         {resultCount ? (
-          result.map((track, key) => {
-            return <Album key={key} albumData={track}></Album>;
-          })
+          <div>
+            <Pagination
+              count={Math.floor(resultCount/10)+1}
+              page={page}
+              onChange={(event, value) => setPage(value)}
+            />
+            <div className={classes.results}>
+              {result
+                .slice(
+                  (page - 1) * 10,
+                  page * 10 < resultCount ? page * 10 : resultCount
+                )
+                .map((track, key) => {
+                  return <Album key={key} albumData={track}></Album>;
+                })}
+            </div>
+          </div>
         ) : (
           <Typography className={classes.resultLabel} color="textPrimary">
             {resultLabel}
