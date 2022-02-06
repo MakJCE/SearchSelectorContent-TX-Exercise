@@ -51,13 +51,13 @@ const Album = ({ albumData }) => {
           />
           <CardContent>
             <Chip label={`${albumData.collectionPrice} $`} className={classes.priceChip} color="secondary"/>
-            <Typography gutterBottom variant="h2">
+            <Typography id="track-name" gutterBottom variant="h2">
               {albumData.trackName ?? "No track name"}
             </Typography>
-            <Typography gutterBottom variant="h3">
+            <Typography id="artist-name" gutterBottom variant="h3">
               by {albumData.artistName ?? "No artist name"}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography id="track-kind" variant="body2" color="textSecondary" component="p">
               {albumData.kind ?? "No track type"}
             </Typography>
           </CardContent>
